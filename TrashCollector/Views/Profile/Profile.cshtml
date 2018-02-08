@@ -1,0 +1,92 @@
+﻿@model TrashCollector.Models.CustomerModel
+
+
+@{
+    ViewBag.Title = "Profile";
+}
+
+<h2>Profile</h2>
+
+@if (User.IsInRole("Customer"))
+{
+
+
+<div>
+    
+    <h4>CustomerModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CollectionDay)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CollectionDay)
+        </dd>
+
+    </dl>
+</div>
+}
+
+@*@if (User.IsInRole("Employee"))
+{
+  //  @model TrashCollector.Models.Employee
+    <div>
+        <div>
+            <h4>Employee</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.FirstName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Route)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Route)
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+}*@
+
+Add Comment

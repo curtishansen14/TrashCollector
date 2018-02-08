@@ -45,6 +45,15 @@ namespace TrashCollector.Controllers
             return View(list);
         }
 
+        //public ActionResult Role()
+        //{
+
+        //    List<RoleViewModels> list = new List<RoleViewModels>();
+        //    foreach (var role in RoleManager.Roles)
+        //        list.Add(new RoleViewModels(role));
+        //    return View(list);
+        //}
+
         public ActionResult Create()
         {
             return View();

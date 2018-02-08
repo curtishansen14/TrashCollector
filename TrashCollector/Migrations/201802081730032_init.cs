@@ -11,12 +11,23 @@ namespace TrashCollector.Migrations
                 "dbo.CustomerModels",
                 c => new
                     {
-                        ID = c.String(nullable: false, maxLength: 128),
+                        ID = c.Int(nullable: false, identity: true),
                         FirstName = c.String(nullable: false),
                         LastName = c.String(nullable: false),
                         Address = c.String(nullable: false),
-                        Zip = c.Int(nullable: false),
+                        Zip = c.String(nullable: false),
                         CollectionDay = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
+                "dbo.Employees",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(nullable: false),
+                        LastName = c.String(nullable: false),
+                        Route = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -108,6 +119,7 @@ namespace TrashCollector.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.Employees");
             DropTable("dbo.CustomerModels");
         }
     }

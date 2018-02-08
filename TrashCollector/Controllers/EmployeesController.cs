@@ -29,10 +29,7 @@ namespace TrashCollector.Controllers
                 PickUpList = PickUpList.Where(m => m.Zip.Contains(searchZip));
             }
             
-
             return View(PickUpList);
-
-
         }
 
         // GET: Employees/Details/5

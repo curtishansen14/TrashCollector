@@ -21,7 +21,7 @@ namespace TrashCollector.Controllers
         }
 
         // GET: CustomerModels/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -60,7 +60,7 @@ namespace TrashCollector.Controllers
         }
 
         // GET: CustomerModels/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -91,7 +91,7 @@ namespace TrashCollector.Controllers
         }
 
         // GET: CustomerModels/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int? id)
         {
             if (id == null)
             {
