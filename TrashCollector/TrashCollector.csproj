@@ -168,23 +168,30 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerModelsController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802062114594_InitialCreate.cs" />
-    <Compile Include="Migrations\201802062114594_InitialCreate.Designer.cs">
-      <DependentUpon>201802062114594_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201802072126375_init.cs" />
+    <Compile Include="Migrations\201802072126375_init.Designer.cs">
+      <DependentUpon>201802072126375_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802062359591_role.cs" />
-    <Compile Include="Migrations\201802062359591_role.Designer.cs">
-      <DependentUpon>201802062359591_role.cs</DependentUpon>
+    <Compile Include="Migrations\201802072139428_changed id to int.cs" />
+    <Compile Include="Migrations\201802072139428_changed id to int.Designer.cs">
+      <DependentUpon>201802072139428_changed id to int.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802072153486_made key.cs" />
+    <Compile Include="Migrations\201802072153486_made key.Designer.cs">
+      <DependentUpon>201802072153486_made key.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\RoleViewModels.cs" />
@@ -251,6 +258,16 @@
     <Content Include="Views\Role\Edit.cshtml" />
     <Content Include="Views\Role\Detail.cshtml" />
     <Content Include="Views\Role\Delete.cshtml" />
+    <Content Include="Views\CustomerModels\Create.cshtml" />
+    <Content Include="Views\CustomerModels\Delete.cshtml" />
+    <Content Include="Views\CustomerModels\Details.cshtml" />
+    <Content Include="Views\CustomerModels\Edit.cshtml" />
+    <Content Include="Views\CustomerModels\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -264,11 +281,14 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802062114594_InitialCreate.resx">
-      <DependentUpon>201802062114594_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802072126375_init.resx">
+      <DependentUpon>201802072126375_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802062359591_role.resx">
-      <DependentUpon>201802062359591_role.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802072139428_changed id to int.resx">
+      <DependentUpon>201802072139428_changed id to int.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802072153486_made key.resx">
+      <DependentUpon>201802072153486_made key.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

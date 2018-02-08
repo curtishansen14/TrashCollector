@@ -7,10 +7,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TrashCollector.Models
 {
-    public class CustomerModel
+    public class Employee
     {
-        [Key]
         public int ID { get; set; }
+
         [Display(Name = "First Name")]
         [Required]
         public string FirstName { get; set; }
@@ -19,17 +19,10 @@ namespace TrashCollector.Models
         [Required]
         public string LastName { get; set; }
 
-        [Display(Name = "Street Address")]
+        [Display(Name = "Route by Zipcode")]
         [Required]
-        public string Address { get; set; }
-
-        [Display(Name = "Zip")]
-        [Required]
-        public string Zip { get; set; }
-
-        [Display(Name = "Collection Day")]
-        [Required]
-        public DayOfWeek CollectionDay { get; set; }
-
+        public int Route { get; set; }
     }
+
+
 }
