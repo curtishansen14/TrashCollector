@@ -158,7 +158,6 @@ namespace TrashCollector.Controllers
             foreach (var role in RoleManager.Roles)
                 list.Add(new SelectListItem() { Value = role.Name, Text = role.Name });
             ViewBag.Roles = list;
-            //list.RemoveAt(2);
             return View();
         }
 

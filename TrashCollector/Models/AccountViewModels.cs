@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace TrashCollector.Models
@@ -8,6 +9,8 @@ namespace TrashCollector.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+
     }
 
     public class ExternalLoginListViewModel
@@ -65,6 +68,10 @@ namespace TrashCollector.Models
     public class RegisterViewModel
     {
         [Required]
+        [Display(Name = "Role")]
+        public string RoleName { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
@@ -80,9 +87,20 @@ namespace TrashCollector.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
+
+        [Display(Name = "Street Address")]
         [Required]
-        [Display(Name = "Role")]
-        public string RoleName { get; set; }
+        public string Address { get; set; }
+
+        [Display(Name = "Zip")]
+        [Required]
+        public string Zip { get; set; }
+
+        [Display(Name = "Collection Day")]
+        [Required]
+        public DayOfWeek CollectionDay { get; set; }
+
+
     }
 
     public class ResetPasswordViewModel

@@ -333,7 +333,25 @@ namespace TrashCollector.Controllers
             base.Dispose(disposing);
         }
 
-#region Helpers
+        //public ActionResult GetCollectionDay()
+        //{
+        //    return View();
+        //}
+
+        //[HttpPost]
+        //// POST: /Manage/SetPickupDays
+        //public async Task<ActionResult> GetCollectionDay(GetCollectionDayViewModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+        //        user. = model.CollectionDay;
+        //        var result = await UserManager.UpdateAsync(user);
+        //    }
+        //    return RedirectToAction("SetCollectionDayConfirmation", "Manage");
+        //}
+
+        #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 

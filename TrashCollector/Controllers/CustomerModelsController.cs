@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using TrashCollector.Models;
@@ -46,7 +48,7 @@ namespace TrashCollector.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FirstName,LastName,Address,Zip,CollectionDay")] CustomerModel customerModel)
+        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,Address,Zip,CollectionDay")] CustomerModel customerModel)
         {
            
          
@@ -79,7 +81,7 @@ namespace TrashCollector.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,Address,CollectionDay")] CustomerModel customerModel)
+        public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,Address,Zip,CollectionDay")] CustomerModel customerModel)
         {
             if (ModelState.IsValid)
             {
@@ -124,5 +126,6 @@ namespace TrashCollector.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }

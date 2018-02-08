@@ -32,4 +32,10 @@ namespace TrashCollector.Models
         public DayOfWeek CollectionDay { get; set; }
 
     }
+
+    //public class GetCollectionDay
+    //{
+    //    [Required]
+    //    public DayOfWeek CollectionDay { get; set; }
+    //}
 }
