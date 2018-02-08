@@ -12,6 +12,7 @@ namespace TrashCollector.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
+                        UserID = c.String(),
                         FirstName = c.String(nullable: false),
                         LastName = c.String(nullable: false),
                         Address = c.String(nullable: false),

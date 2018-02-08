@@ -23,6 +23,19 @@ namespace TrashCollector.Controllers
         }
 
         // GET: CustomerModels/Details/5
+        public ActionResult UserDetails(string id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            CustomerModel customerModel = db.CustomerModels.Where(m=>m.UserID == id).FirstOrDefault();
+            if (customerModel == null)
+            {
+                return RedirectToAction("Create");
+            }
+            return View("Details", customerModel);
+        }
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,7 +49,6 @@ namespace TrashCollector.Controllers
             }
             return View(customerModel);
         }
-
         // GET: CustomerModels/Create
         public ActionResult Create()
         {
@@ -50,8 +62,8 @@ namespace TrashCollector.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,FirstName,LastName,Address,Zip,CollectionDay")] CustomerModel customerModel)
         {
-           
-         
+
+            customerModel.UserID = User.Identity.GetUserId();
                 if (ModelState.IsValid)
                 {
                     db.CustomerModels.Add(customerModel);
@@ -81,7 +93,7 @@ namespace TrashCollector.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,FirstName,LastName,Address,Zip,CollectionDay")] CustomerModel customerModel)
+        public ActionResult Edit([Bind(Include = "ID,UserID,FirstName,LastName,Address,Zip,CollectionDay")] CustomerModel customerModel)
         {
             if (ModelState.IsValid)
             {

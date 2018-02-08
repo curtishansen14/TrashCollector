@@ -88,17 +88,17 @@ namespace TrashCollector.Models
         public string ConfirmPassword { get; set; }
 
 
-        [Display(Name = "Street Address")]
-        [Required]
-        public string Address { get; set; }
+        //[Display(Name = "Street Address")]
+        //[Required]
+        //public string Address { get; set; }
 
-        [Display(Name = "Zip")]
-        [Required]
-        public string Zip { get; set; }
+        //[Display(Name = "Zip")]
+        //[Required]
+        //public string Zip { get; set; }
 
-        [Display(Name = "Collection Day")]
-        [Required]
-        public DayOfWeek CollectionDay { get; set; }
+        //[Display(Name = "Collection Day")]
+        //[Required]
+        //public DayOfWeek CollectionDay { get; set; }
 
 
     }
